@@ -1,0 +1,61 @@
+<UserControl
+    x:Class="Lunar.Avalonia1.UserControls.DataGridForAccountSummary"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Lunar.Avalonia1.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:m="clr-namespace:Lunar.Avalonia1.Models;assembly=Lunar.Avalonia1"
+    xmlns:vm="clr-namespace:Lunar.Avalonia1.ViewModels;assembly=Lunar.Avalonia1"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:CompileBindings="True"
+    x:DataType="vm:AccountSummaryViewModel"
+    mc:Ignorable="d">
+    <StackPanel>
+        <TextBlock
+            Margin="6"
+            Classes="H5"
+            Text="{Binding WelcomeText}"
+            Theme="{DynamicResource TitleTextBlock}" />
+
+        
+        <DataGrid
+            Margin="8"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            CanUserSortColumns="True"
+            HeadersVisibility="All"
+            IsReadOnly="True"
+            ItemsSource="{Binding AccountSummary}">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Width="6*"
+                    x:DataType="m:Song"
+                    Binding="{Binding Title}"
+                    Header="Title" />
+                <DataGridTextColumn
+                    Width="6*"
+                    x:DataType="m:Song"
+                    Binding="{Binding Artist}"
+                    Header="Artist" />
+                <DataGridTextColumn
+                    Width="6*"
+                    x:DataType="m:Song"
+                    Binding="{Binding Album}"
+                    Header="Album" />
+                <DataGridTemplateColumn Header="Duration" SortMemberPath="Duration">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Margin="8,0,0,0"
+                                x:DataType="m:Song"
+                                VerticalAlignment="Center"
+                                Text="{Binding Duration}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</UserControl>
