@@ -19,42 +19,85 @@
         </Style>
     </UserControl.Styles>
     <ScrollViewer HorizontalScrollBarVisibility="Visible">
-        <StackPanel Margin="20">
+        <StackPanel Margin="6">
             <StackPanel
-                Margin="20 0 0 4"
+                Margin="6 0 0 4"
                 HorizontalAlignment="Left"
                 Orientation="Horizontal">
                 <Image Width="32" Height="32">
                     <Image.Source>
                         <DrawingImage>
                             <DrawingGroup>
-                                <GeometryDrawing Brush="#8B44AC" Geometry="M1280 1024h305q-5 6-10 10.5t-9 7.5l-3 4-623 600q-18 18-44 18t-44-18l-624-602q-5-2-21-20h369q22 0 39.5-13.5t22.5-34.5l70-281 190 667q6 20 23 33t39 13q21 0 38-13t23-33l146-485 56 112q18 35 57 35zm512-428q0 145-103 300h-369l-111-221q-8-17-25.5-27t-36.5-8q-45 5-56 46l-129 430-196-686q-6-20-23.5-33t-39.5-13-39 13.5-22 34.5l-116 464h-423q-103-155-103-300 0-220 127-344t351-124q62 0 126.5 21.5t120 58 95.5 68.5 76 68q36-36 76-68t95.5-68.5 120-58 126.5-21.5q224 0 351 124t127 344z" />
+                                <GeometryDrawing Brush="#3464eb" Geometry="M560 224h-29.5c-8.8-20-21.6-37.7-37.4-52.5L512 96h-32c-29.4 0-55.4 13.5-73 34.3-7.6-1.1-15.1-2.3-23-2.3H256c-77.4 0-141.9 55-156.8 128H56c-14.8 0-26.5-13.5-23.5-28.8C34.7 215.8 45.4 208 57 208h1c3.3 0 6-2.7 6-6v-20c0-3.3-2.7-6-6-6-28.5 0-53.9 20.4-57.5 48.6C-3.9 258.8 22.7 288 56 288h40c0 52.2 25.4 98.1 64 127.3V496c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-48h128v48c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16v-80.7c11.8-8.9 22.3-19.4 31.3-31.3H560c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16zm-128 64c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM256 96h128c5.4 0 10.7.4 15.9.8 0-.3.1-.5.1-.8 0-53-43-96-96-96s-96 43-96 96c0 2.1.5 4.1.6 6.2 15.2-3.9 31-6.2 47.4-6.2z" />
                             </DrawingGroup>
                         </DrawingImage>
                     </Image.Source>
                 </Image>
                 <TextBlock
+                    Margin="10 0"
                     HorizontalAlignment="Left"
                     Classes="H1"
-                    Text="My Lovely Expenses"
+                    Text="My Expense Dashboard"
                     Theme="{DynamicResource TitleTextBlock}" />
             </StackPanel>
-            <TextBlock
-                MaxWidth="600"
-                Margin="0"
-                Classes="Secondary"
-                Text="AvaloniaUI Theme inspired by Semi Design. An easy-to-customize modern design system that helps designers and developers create high-quality products."
-                TextWrapping="Wrap" />
-            <StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel>
-                        <Calendar Margin="6" />
-                    </StackPanel>
-                    <StackPanel>
-                        <pages:DataGridForAccountSummary />
-                    </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="6">
+                <TextBlock
+                    Margin="0 2"
+                    Text="Welcome, Goh Chun Lin"/>
+            </StackPanel>
+            <StackPanel Margin="6" Orientation="Horizontal">
+                <StackPanel>
+                    <Calendar />
                 </StackPanel>
-                
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="6">
+                        <ProgressBar
+                            Width="100"
+                            Height="100"
+                            IsIndeterminate="False"
+                            ShowProgressText="True"
+                            Theme="{DynamicResource ProgressRing}"
+                            Value="80" />
+                        <StackPanel Margin="6">
+                            <TextBlock
+                                HorizontalAlignment="Left"
+                                Classes="H4"
+                                Text="Monthly Savings"
+                                Theme="{DynamicResource TitleTextBlock}" />
+                            <Grid
+                                VerticalAlignment="Top"
+                                ColumnDefinitions="Auto, *"
+                                RowDefinitions="*">
+                                <TextBlock Grid.Row="0" Grid.Column="0" Classes="H6" Margin="2">SGD</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="1" Margin="2">1,244</TextBlock>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="6">
+                        <ProgressBar
+                            Width="100"
+                            Height="100"
+                            IsIndeterminate="False"
+                            ShowProgressText="True"
+                            Theme="{DynamicResource ProgressRing}"
+                            Value="40" />
+                        <StackPanel Margin="6">
+                            <TextBlock
+                                HorizontalAlignment="Left"
+                                Classes="H4"
+                                Text="Investment"
+                                Theme="{DynamicResource TitleTextBlock}" />
+                            <Grid
+                                VerticalAlignment="Top"
+                                ColumnDefinitions="Auto, *"
+                                RowDefinitions="*">
+                                <TextBlock Grid.Row="0" Grid.Column="0" Classes="H6" Margin="2">SGD</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="1" Margin="2">744</TextBlock>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>                
             </StackPanel>
         </StackPanel>
     </ScrollViewer>

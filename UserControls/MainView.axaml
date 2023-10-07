@@ -25,16 +25,13 @@
                     <TextBlock
                         VerticalAlignment="Center"
                         Classes="H6"
-                        Text="Semi Avalonia"
+                        Text="Lunar Fox"
                         Theme="{DynamicResource TitleTextBlock}" />
                     <TextBlock
                         Margin="8,0"
                         VerticalAlignment="Center"
-                        Text="/" />
-                    <TextBlock
-                        Margin="8,0"
-                        VerticalAlignment="Center"
-                        Classes="Secondary" />
+                        Classes="Secondary"
+                        Text="Budget Planner" />
                 </StackPanel>
                 <ToggleSwitch
                     Grid.Column="1"
@@ -66,11 +63,11 @@
             HorizontalAlignment="Stretch"
             TabStripPlacement="Left"
             Theme="{DynamicResource NavigationTab}">
-            <TabItem Header="Overview">
-                <pages:DataGridForAccountSummary />
-            </TabItem>
-            <TabItem Header="Overview 2">
+            <TabItem Header="Dashboard">
                 <pages:Overview />
+            </TabItem>
+            <TabItem Header="Expense Report">
+                <pages:DataGridForAccountSummary />
             </TabItem>
         </TabControl>
     </Grid>
