@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:Lunar.Avalonia1.ViewModels"
         xmlns:pages="using:Lunar.Avalonia1.UserControls"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="800"
         x:Class="Lunar.Avalonia1.MainWindow"
         Title="Lunar.Avalonia1">
     <pages:MainView />

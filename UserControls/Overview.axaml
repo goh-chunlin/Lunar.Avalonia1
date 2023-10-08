@@ -7,8 +7,8 @@
     xmlns:local="clr-namespace:Lunar.Avalonia1.UserControls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:pages="using:Lunar.Avalonia1.UserControls"
-    d:DesignHeight="1000"
-    d:DesignWidth="1920"
+    d:DesignHeight="800"
+    d:DesignWidth="1000"
     mc:Ignorable="d">
     <UserControl.Styles>
         <Style Selector="Border.CodeBlock">
@@ -18,7 +18,7 @@
             <Setter Property="Background" Value="{DynamicResource SemiColorFill0}" />
         </Style>
     </UserControl.Styles>
-    <ScrollViewer HorizontalScrollBarVisibility="Visible">
+    <ScrollViewer>
         <StackPanel Margin="6">
             <StackPanel
                 Margin="6 0 0 4"
@@ -49,7 +49,7 @@
                 <StackPanel>
                     <Calendar />
                 </StackPanel>
-                <StackPanel>
+                <StackPanel Margin="18 0 0 0">
                     <StackPanel Orientation="Horizontal" Margin="6">
                         <ProgressBar
                             Width="100"
@@ -95,6 +95,59 @@
                                 <TextBlock Grid.Row="0" Grid.Column="0" Classes="H6" Margin="2">SGD</TextBlock>
                                 <TextBlock Grid.Row="0" Grid.Column="1" Margin="2">744</TextBlock>
                             </Grid>
+                        </StackPanel>
+                    </StackPanel>
+
+                    
+                    <StackPanel Margin="6">
+                        <TextBlock
+                            HorizontalAlignment="Left"
+                            Classes="H4"
+                            Text="Expenses"
+                            Theme="{DynamicResource TitleTextBlock}" />
+
+                        <Grid
+                            VerticalAlignment="Top"
+                            ColumnDefinitions="Auto, *"
+                            RowDefinitions="*,*,*">
+                            <TextBlock Grid.Row="0" Grid.Column="0" Classes="H6" Margin="2">Rental</TextBlock>
+                            <ProgressBar
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Width="200"
+                                HorizontalAlignment="Left"
+                                Classes="Primary"
+                                Maximum="100"
+                                Minimum="0"
+                                ShowProgressText="True"
+                                Value="30" />
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" Classes="H6" Margin="2">Food</TextBlock>
+                            <ProgressBar
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Width="200"
+                                HorizontalAlignment="Left"
+                                Classes="Primary"
+                                Maximum="100"
+                                Minimum="0"
+                                ShowProgressText="True"
+                                Value="20" />
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" Classes="H6" Margin="2">Transportation</TextBlock>
+                            <ProgressBar
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Width="200"
+                                HorizontalAlignment="Left"
+                                Classes="Primary"
+                                Maximum="100"
+                                Minimum="0"
+                                ShowProgressText="True"
+                                Value="16.4" />
+                        </Grid>
+                        <StackPanel Margin="0 12 0 0" HorizontalAlignment="Center" >
+                            <Button Classes="Primary" Theme="{DynamicResource BorderlessButton}">View More...</Button>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>                
