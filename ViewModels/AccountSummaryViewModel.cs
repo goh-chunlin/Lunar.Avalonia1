@@ -4,12 +4,14 @@ using System.Linq;
 using Avalonia.Collections;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Lunar.Avalonia1.Models;
+using Syncfusion.XlsIO;
+using System.IO;
 
 namespace Lunar.Avalonia1.ViewModels;
 
 public class AccountSummaryViewModel: ObservableObject
 {
-    private ObservableCollection<Expense> _expenseSummary;
+    private ObservableCollection<Expense>? _expenseSummary;
 
     public ObservableCollection<Expense> ExpenseSummary 
     { 
@@ -31,11 +33,65 @@ public class AccountSummaryViewModel: ObservableObject
         SearchReport();
     }
 
+    public void OnExportToExcelCommand()
+    {
+        ExportReportToExcel();
+    }
+
     private void SearchReport()
     {
         ExpenseSummary = new ObservableCollection<Expense>(
             Expense.Expenses
             .Where(e => e.TransactedAt >= SearchStartDate && e.TransactedAt <= SearchEndDate)
             .OrderByDescending(e => e.TransactedAt));
+    }
+
+    private void ExportReportToExcel()
+    {
+        using (var excelEngine = new ExcelEngine())
+        {
+            //Instantiate the Excel application object
+            IApplication application = excelEngine.Excel;
+
+            //Assigns default application version
+            application.DefaultVersion = ExcelVersion.Xlsx;
+
+            // Create a new workbook
+            IWorkbook workbook = excelEngine.Excel.Workbooks.Create(1);
+
+            // Access first worksheet from the workbook
+            IWorksheet worksheet = workbook.Worksheets[0];
+
+            // Set the header row
+            worksheet.Range["A1"].Text = "Item";
+            worksheet.Range["B1"].Text = "Remark";
+            worksheet.Range["C1"].Text = "Amount (SGD)";
+            worksheet.Range["D1"].Text = "Transaction Date";
+
+            // Add the data rows
+            var row = 2;
+            foreach (var expense in ExpenseSummary)
+            {
+                worksheet.Range[row, 1].Text = expense.Title;
+                worksheet.Range[row, 2].Text = expense.Remark;
+                worksheet.Range[row, 3].Text = expense.Amount.ToString("N2");
+                worksheet.Range[row, 4].Text = expense.TransactedAt.ToString("yyyy-MM-dd");
+
+                row++;
+            }
+
+            // Check if file directory exists
+            if (!Directory.Exists("output"))
+            {
+                Directory.CreateDirectory("output");
+            }
+
+            // Save the workbook            
+            FileStream stream = new FileStream($"output/ExpenseSummary_{DateTime.Now:yyyy-mm-dd-HHmmss}.xlsx", FileMode.Create, FileAccess.ReadWrite);
+            workbook.SaveAs(stream);
+
+            // Dispose stream
+            stream.Dispose();
+        }
     }
 }
