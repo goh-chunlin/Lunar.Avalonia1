@@ -65,7 +65,7 @@
                 <DataGridTextColumn
                     Width="6*"
                     x:DataType="m:Expense"
-                    Binding="{Binding Amount}"
+                    Binding="{Binding Amount, StringFormat='c'}"
                     Header="Amount" />
                 <DataGridTemplateColumn Header="Transaction Date" SortMemberPath="TransactedAt">
                     <DataGridTemplateColumn.CellTemplate>
@@ -74,7 +74,7 @@
                                 Margin="8,0,0,0"
                                 x:DataType="m:Expense"
                                 VerticalAlignment="Center"
-                                Text="{Binding TransactedAt}" />
+                                Text="{Binding TransactedAt, StringFormat=\{0:yyyy-MM-dd\}}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

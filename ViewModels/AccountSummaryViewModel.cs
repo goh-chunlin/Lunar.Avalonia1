@@ -23,12 +23,19 @@ public class AccountSummaryViewModel: ObservableObject
 
     public AccountSummaryViewModel()
     {
-        ExpenseSummary = new ObservableCollection<Expense>(Expense.Expenses);
+        SearchReport();
     }
 
     public void OnSearchCommand()
     {
+        SearchReport();
+    }
+
+    private void SearchReport()
+    {
         ExpenseSummary = new ObservableCollection<Expense>(
-            Expense.Expenses.Where(e => e.TransactedAt >= SearchStartDate && e.TransactedAt <= SearchEndDate));
+            Expense.Expenses
+            .Where(e => e.TransactedAt >= SearchStartDate && e.TransactedAt <= SearchEndDate)
+            .OrderByDescending(e => e.TransactedAt));
     }
 }
