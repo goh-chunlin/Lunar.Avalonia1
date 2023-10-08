@@ -1,11 +1,14 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Avalonia.Collections;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Lunar.Avalonia1.Models;
 using Syncfusion.XlsIO;
 using System.IO;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
+using System.Threading.Tasks;
+using MsBox.Avalonia.Base;
 
 namespace Lunar.Avalonia1.ViewModels;
 
@@ -15,7 +18,7 @@ public class AccountSummaryViewModel: ObservableObject
 
     public ObservableCollection<Expense> ExpenseSummary 
     { 
-        get => _expenseSummary; 
+        get => _expenseSummary ?? new ObservableCollection<Expense>(); 
         set => SetProperty(ref _expenseSummary, value); 
     }
 
@@ -33,9 +36,9 @@ public class AccountSummaryViewModel: ObservableObject
         SearchReport();
     }
 
-    public void OnExportToExcelCommand()
+    public async Task OnExportToExcelCommandAsync()
     {
-        ExportReportToExcel();
+        await ExportReportToExcelAsync();
     }
 
     private void SearchReport()
@@ -46,8 +49,10 @@ public class AccountSummaryViewModel: ObservableObject
             .OrderByDescending(e => e.TransactedAt));
     }
 
-    private void ExportReportToExcel()
+    private async Task ExportReportToExcelAsync()
     {
+        string fileName = $"ExpenseSummary_{DateTime.Now:yyyy-MM-dd-HHmmss}.xlsx";
+
         using (var excelEngine = new ExcelEngine())
         {
             //Instantiate the Excel application object
@@ -87,11 +92,17 @@ public class AccountSummaryViewModel: ObservableObject
             }
 
             // Save the workbook            
-            FileStream stream = new FileStream($"output/ExpenseSummary_{DateTime.Now:yyyy-mm-dd-HHmmss}.xlsx", FileMode.Create, FileAccess.ReadWrite);
+            FileStream stream = new($"output/{fileName}", FileMode.Create, FileAccess.ReadWrite);
             workbook.SaveAs(stream);
 
             // Dispose stream
             stream.Dispose();
         }
+
+        IMsBox<ButtonResult> messageBox = MessageBoxManager
+            .GetMessageBoxStandard("Successful Export", $"The report has been exported to the Excel file {fileName}.",
+                ButtonEnum.Ok, Icon.Info);
+
+        await messageBox.ShowAsync();
     }
 }

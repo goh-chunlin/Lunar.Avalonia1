@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace Lunar.Avalonia1.Models
 {
-    public class Expense : INotifyPropertyChanged
+    public class Expense
     {
         public string Title { get; set; }
         public string Category { get; set; }
@@ -22,21 +22,6 @@ namespace Lunar.Avalonia1.Models
             Amount = amount;
             Remark = remark;
             TransactedAt = transactedAt;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        protected bool SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(field, value)) return false;
-            field = value;
-            OnPropertyChanged(propertyName);
-            return true;
         }
 
         public static List<Expense> Expenses { get; set; } = ExpenseGenerator.GenerateExpenses(500);

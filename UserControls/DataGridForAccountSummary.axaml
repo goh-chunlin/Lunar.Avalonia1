@@ -86,7 +86,7 @@
                 ColumnDefinitions="4*,1*">
                 <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
                     <Button Classes="Secondary" Theme="{DynamicResource BorderlessButton}"
-                        Command="{Binding OnExportToExcelCommand}">Export</Button>
+                        Command="{Binding OnExportToExcelCommandAsync}">Export</Button>
                 </StackPanel>                  
             </Grid>
             
