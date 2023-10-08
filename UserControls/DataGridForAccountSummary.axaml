@@ -7,55 +7,88 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:m="clr-namespace:Lunar.Avalonia1.Models;assembly=Lunar.Avalonia1"
     xmlns:vm="clr-namespace:Lunar.Avalonia1.ViewModels;assembly=Lunar.Avalonia1"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
     d:DesignHeight="450"
     d:DesignWidth="800"
     x:CompileBindings="True"
     x:DataType="vm:AccountSummaryViewModel"
     mc:Ignorable="d">
-    <StackPanel>
-        <TextBlock
-            Margin="6"
-            Classes="H5"
-            Text="{Binding WelcomeText}"
-            Theme="{DynamicResource TitleTextBlock}" />
-
-        
+    <Grid 
+        RowDefinitions="125,*,30" >
+        <StackPanel Grid.Row="0">
+            <TextBlock
+                Margin="6"
+                Classes="H5"
+                Text="Expense Report"
+                Theme="{DynamicResource TitleTextBlock}" />
+            <Grid
+                ColumnDefinitions="2*,2*,1*">
+                <StackPanel Grid.Column="0">
+                    <TextBlock
+                        Margin="6"
+                        Text="From Date" />
+                    <DatePicker Name="ReportStartDate" SelectedDate="{Binding SearchStartDate, Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock
+                        Margin="6"
+                        Text="To Date" />
+                    <DatePicker Name="ReportEndDate" SelectedDate="{Binding SearchEndDate, Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
+                    <Button Classes="Primary" Theme="{DynamicResource SolidButton}"
+                        Command="{Binding OnSearchCommand}">Search</Button>
+                </StackPanel>                  
+            </Grid>
+        </StackPanel>
         <DataGrid
-            Margin="8"
+            Margin="6"
+            Grid.Row="1" 
+            MinHeight="400"
             CanUserReorderColumns="True"
             CanUserResizeColumns="True"
             CanUserSortColumns="True"
             HeadersVisibility="All"
             IsReadOnly="True"
-            ItemsSource="{Binding AccountSummary}">
+            ItemsSource="{Binding ExpenseSummary}">
             <DataGrid.Columns>
                 <DataGridTextColumn
                     Width="6*"
-                    x:DataType="m:Song"
+                    x:DataType="m:Expense"
                     Binding="{Binding Title}"
                     Header="Title" />
                 <DataGridTextColumn
                     Width="6*"
-                    x:DataType="m:Song"
-                    Binding="{Binding Artist}"
-                    Header="Artist" />
+                    x:DataType="m:Expense"
+                    Binding="{Binding Category}"
+                    Header="Category" />
                 <DataGridTextColumn
                     Width="6*"
-                    x:DataType="m:Song"
-                    Binding="{Binding Album}"
-                    Header="Album" />
-                <DataGridTemplateColumn Header="Duration" SortMemberPath="Duration">
+                    x:DataType="m:Expense"
+                    Binding="{Binding Amount}"
+                    Header="Amount" />
+                <DataGridTemplateColumn Header="Transaction Date" SortMemberPath="TransactedAt">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock
                                 Margin="8,0,0,0"
-                                x:DataType="m:Song"
+                                x:DataType="m:Expense"
                                 VerticalAlignment="Center"
-                                Text="{Binding Duration}" />
+                                Text="{Binding TransactedAt}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-    </StackPanel>
+        
+        <StackPanel Grid.Row="2" VerticalAlignment="Bottom">
+            <Grid
+                ColumnDefinitions="4*,1*">
+                <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
+                    <Button Classes="Secondary" Theme="{DynamicResource BorderlessButton}">Export</Button>
+                </StackPanel>                  
+            </Grid>
+            
+        </StackPanel> 
+    </Grid>
 </UserControl>
