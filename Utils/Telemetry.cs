@@ -23,23 +23,16 @@ public class Telemetry
                 dataProtectionKey);
             string apiUrl = "https://influx-prod-18-prod-ap-southeast-0.grafana.net/api/v1/push/influx/write";
 
-            HttpClient httpClient = new HttpClient();
+            HttpClient httpClient = new();
             httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + userId + ":" + apiKey);
 
             string metricLabelsText = metricLabels.Select(kv => $"{kv.Key}={kv.Value}").Aggregate((a, b) => $"{a},{b}");
             string metricText = $"{metricName},{metricLabelsText} metric={metricValue}";
             HttpContent content = new StringContent(metricText, Encoding.UTF8, "text/plain");
 
-            HttpResponseMessage response = await httpClient.PostAsync(apiUrl, content);
-            int responseCode = (int)response.StatusCode;
-
-            string responseText = await response.Content.ReadAsStringAsync();
-            
-            //Console.WriteLine(responseCode);
+            await httpClient.PostAsync(apiUrl, content);
         }
-        catch (Exception e)
-        {
-            //Console.WriteLine("Exception: " + e);
-        }  
+        catch (Exception)
+        { }  
     }
 }
