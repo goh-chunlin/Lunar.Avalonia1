@@ -37,7 +37,7 @@
                 </StackPanel>
                 <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
                     <Button Classes="Primary" Theme="{DynamicResource SolidButton}"
-                        Command="{Binding OnSearchCommand}">Search</Button>
+                        Command="{Binding OnSearchCommandAsync}">Search</Button>
                 </StackPanel>                  
             </Grid>
         </StackPanel>

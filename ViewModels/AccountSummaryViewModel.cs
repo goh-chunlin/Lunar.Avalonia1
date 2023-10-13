@@ -9,6 +9,8 @@ using MsBox.Avalonia;
 using MsBox.Avalonia.Enums;
 using System.Threading.Tasks;
 using MsBox.Avalonia.Base;
+using Lunar.Avalonia1.Utils;
+using System.Collections.Generic;
 
 namespace Lunar.Avalonia1.ViewModels;
 
@@ -27,13 +29,16 @@ public class AccountSummaryViewModel: ObservableObject
     public DateTimeOffset SearchEndDate { get; set; } = DateTimeOffset.Now;
 
     public AccountSummaryViewModel()
-    {
-        SearchReport();
+    {        
+        Task.Run(async () =>
+        {
+            await SearchReportAsync();
+        });
     }
 
-    public void OnSearchCommand()
+    public async Task OnSearchCommandAsync()
     {
-        SearchReport();
+        await SearchReportAsync();
     }
 
     public async Task OnExportToExcelCommandAsync()
@@ -41,12 +46,22 @@ public class AccountSummaryViewModel: ObservableObject
         await ExportReportToExcelAsync();
     }
 
-    private void SearchReport()
+    private async Task SearchReportAsync()
     {
         ExpenseSummary = new ObservableCollection<Expense>(
             Expense.Expenses
             .Where(e => e.TransactedAt >= SearchStartDate && e.TransactedAt <= SearchEndDate)
             .OrderByDescending(e => e.TransactedAt));
+
+        // Send telemetry
+        await Telemetry.SendTelemetryAsync("report", new Dictionary<string, string>
+            {
+                { "report", "account_summary" },
+                { "action", "search" },
+                { "action_date", DateTimeOffset.Now.ToString("yyyy-MM-dd") },
+                { "start_date", SearchStartDate.ToString("yyyy-MM-dd") },
+                { "end_date", SearchEndDate.ToString("yyyy-MM-dd") }
+            }, ExpenseSummary.Count);
     }
 
     private async Task ExportReportToExcelAsync()
@@ -104,5 +119,15 @@ public class AccountSummaryViewModel: ObservableObject
                 ButtonEnum.Ok, Icon.Info);
 
         await messageBox.ShowAsync();
+
+        // Send telemetry
+        await Telemetry.SendTelemetryAsync("report", new Dictionary<string, string>
+            {
+                { "report", "account_summary" },
+                { "action", "export" },
+                { "action_date", DateTimeOffset.Now.ToString("yyyy-MM-dd") },
+                { "start_date", SearchStartDate.ToString("yyyy-MM-dd") },
+                { "end_date", SearchEndDate.ToString("yyyy-MM-dd") }
+            }, ExpenseSummary.Count);
     }
 }
