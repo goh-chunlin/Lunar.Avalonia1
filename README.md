@@ -27,7 +27,7 @@ Avalonia UI is a cross-platform framework that uses its own rendering engine to 
 #### Semi.Avalonia
 Avalonia theme inspired by Semi Design. 
 
-#### XAML Previewr for Avalonia
+#### XAML Previewer for Avalonia
 The Avalonia XAML Previewer in Visual Studio Code is a powerful tool that allows you to visualise XAML code in real-time. It enables you to efficiently design and fine-tune user interfaces, helping to identify potential issues and visualise the impact of changes instantly.
 
 Since build 2022.3 EAP 7, Rider supports Avalonia previewer using an open-source plugin AvaloniaRider.
@@ -100,4 +100,6 @@ Ship metrics directly from your application code over HTTP for storage in your G
 - [Why GitHub Copilot is not a Threat to your Job](https://blog.devgenius.io/why-github-copilot-is-not-a-treat-for-your-job-cd7f5fae9ff9);
 - [I Built an App with GitHub Copilot, Here's the Result](https://www.linkedin.com/pulse/i-built-app-github-copilot-heres-result-simona-winnekes/);
 - [Goldman Sachs CIO is ‘anxious to see results’ from GenAI, but moving carefully | The AI Beat](https://venturebeat.com/ai/goldman-sachs-cio-is-anxious-to-see-results-from-genai-but-moving-carefully-the-ai-beat/);
-- [Proposal: Naming Grid Rows/Columns on Simplified Inline Syntax and Grid.RowColumn](https://github.com/microsoft/microsoft-ui-xaml/issues/2094).
+- [Proposal: Naming Grid Rows/Columns on Simplified Inline Syntax and Grid.RowColumn](https://github.com/microsoft/microsoft-ui-xaml/issues/2094);
+- [Prompting with Copilot](https://www.youtube.com/watch?v=ImWfIDTxn7E);
+- [Building .NET MAUI Apps Faster with GitHub Copilot in Visual Studio 2022](https://www.youtube.com/watch?v=jt9VZqIKGzU)
