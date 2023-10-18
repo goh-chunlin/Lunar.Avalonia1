@@ -106,3 +106,4 @@ Ship metrics directly from your application code over HTTP for storage in your G
 - [Configuring GitHub Copilot in your environment](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment?tool=vscode)
 - [How to Install a GUI Desktop for Ubuntu Server with XFCE and VNC](https://www.vultr.com/docs/install-gui-environment-for-ubuntu/)
 - [Visualize real-time mobile app data with the Embrace data source plugin for Grafana](https://grafana.com/blog/2023/02/13/visualize-real-time-mobile-app-data-with-the-embrace-data-source-plugin-for-grafana/)
+- [Error message related to libICE.so.6 makes code to exit?](https://stackoverflow.com/questions/75281328/error-message-related-to-libice-so-6-makes-code-to-exit)
