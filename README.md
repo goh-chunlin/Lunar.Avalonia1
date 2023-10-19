@@ -102,8 +102,10 @@ Ship metrics directly from your application code over HTTP for storage in your G
 - [Goldman Sachs CIO is ‘anxious to see results’ from GenAI, but moving carefully | The AI Beat](https://venturebeat.com/ai/goldman-sachs-cio-is-anxious-to-see-results-from-genai-but-moving-carefully-the-ai-beat/);
 - [Proposal: Naming Grid Rows/Columns on Simplified Inline Syntax and Grid.RowColumn](https://github.com/microsoft/microsoft-ui-xaml/issues/2094);
 - [Prompting with Copilot](https://www.youtube.com/watch?v=ImWfIDTxn7E);
-- [Building .NET MAUI Apps Faster with GitHub Copilot in Visual Studio 2022](https://www.youtube.com/watch?v=jt9VZqIKGzU)
-- [Configuring GitHub Copilot in your environment](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment?tool=vscode)
-- [How to Install a GUI Desktop for Ubuntu Server with XFCE and VNC](https://www.vultr.com/docs/install-gui-environment-for-ubuntu/)
-- [Visualize real-time mobile app data with the Embrace data source plugin for Grafana](https://grafana.com/blog/2023/02/13/visualize-real-time-mobile-app-data-with-the-embrace-data-source-plugin-for-grafana/)
-- [Error message related to libICE.so.6 makes code to exit?](https://stackoverflow.com/questions/75281328/error-message-related-to-libice-so-6-makes-code-to-exit)
+- [Building .NET MAUI Apps Faster with GitHub Copilot in Visual Studio 2022](https://www.youtube.com/watch?v=jt9VZqIKGzU);
+- [Configuring GitHub Copilot in your environment](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment?tool=vscode);
+- [How to Install a GUI Desktop for Ubuntu Server with XFCE and VNC](https://www.vultr.com/docs/install-gui-environment-for-ubuntu/);
+- [Visual Studio Toolbox Live - C# Productivity in VS Code with C# Dev Kit](https://www.youtube.com/watch?v=7NjTIBezZl0);
+- [WSL: Run Linux GUI Apps](https://www.youtube.com/watch?v=kC3eWRPzeWw);
+- [Visualize real-time mobile app data with the Embrace data source plugin for Grafana](https://grafana.com/blog/2023/02/13/visualize-real-time-mobile-app-data-with-the-embrace-data-source-plugin-for-grafana/);
+- [Error message related to libICE.so.6 makes code to exit?](https://stackoverflow.com/questions/75281328/error-message-related-to-libice-so-6-makes-code-to-exit).
