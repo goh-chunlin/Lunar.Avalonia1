@@ -12,18 +12,6 @@ It's essential to understand that Avalonia works very differently from framework
 
 Avalonia UI is a cross-platform framework that uses its own rendering engine to draw controls. It's not a wrapper around native controls, and it doesn't use native controls. Instead, it uses a cross-platform rendering engine that draws controls using SkiaSharp.
 
-#### MVVM on Avalonia
-
-#### RowDefinition and ColumnDefinition with Riza's Proposal
-
-#### Avalonia on Linux
-
-#### Sharing in 2018 Community Meetup
-
-#### Development Experience with Xamarin.Forms with DC Suite
-
-#### .NET 5 UWP with WinUI 3
-
 #### Semi.Avalonia
 Avalonia theme inspired by Semi Design. 
 
@@ -42,11 +30,7 @@ This extension builds on top of the great C# language capabilities provided by t
 #### Dev Home
 Dev Home is a new control center for Windows providing the ability to monitor projects in your dashboard using customizable widgets, set up your dev environment by downloading apps, packages, or repositories, connect to your developer accounts and tools (such as GitHub), and create a Dev Drive for storage all in one place.
 
-### 2. Syncfusion
-
-#### Applying Syncfusion for Individual Open Source Project
-
-### 3. GitHub Copilot
+### 2. GitHub Copilot
 
 Q: "Is Avalonia in beta?"
 A: "Avalonia is currently in version 0.10.0, which is considered a stable release. However, it is still under active development and new features are being added. You can check the latest version and release notes on the Avalonia website: https://avaloniaui.net/docs/roadmap/"
@@ -64,11 +48,7 @@ Developers continue to claim that the "AI pair programmer" GitHub Copilot tool d
 - Good to explain MVVM concept for new comers;
 - Creative of Humanity vs Source of AI.
 
-### 4. Observability with Prometheus and Grafana
-
-#### What is Observability and Why is it Important?
-
-#### OpenTelemetry
+### 3. Observability with Prometheus and Grafana
 
 #### About Prometheus
 
