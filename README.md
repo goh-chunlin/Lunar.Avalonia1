@@ -41,23 +41,11 @@ IntelliSense is known for its code-completion functionality, while also providin
 
 Developers continue to claim that the "AI pair programmer" GitHub Copilot tool doesn't work well with IntelliSense, which is built in to Visual Studio and Visual Studio Code.
 
-#### Other Project Experience with GitHub Copilot
-- Azure Face Recognition verification tool;
-- HTTP Request (outdated code is generated);
-- XAML Password box is suggested but no library supported;
-- Good to explain MVVM concept for new comers;
-- Creative of Humanity vs Source of AI.
-
 ### 3. Observability with Prometheus and Grafana
 
 #### About Prometheus
 
 Prometheus is an open-source systems monitoring and alerting toolkit originally built at SoundCloud. Since its inception in 2012, many companies and organizations have adopted Prometheus, and the project has a very active developer and user community. It is now a standalone open source project and maintained independently of any company. To emphasize this, and to clarify the project's governance structure, Prometheus joined the Cloud Native Computing Foundation in 2016 as the second hosted project, after Kubernetes.
-
-#### About Graphite
-Alternative to Prometheus.
-
-#### Prometheus Syntax
 
 #### About Grafana
 
@@ -65,8 +53,6 @@ Grafana is the open source analytics & monitoring solution for every database. T
 
 #### Sending Metrics with HTTP
 Ship metrics directly from your application code over HTTP for storage in your Grafana Cloud account using Graphite and Prometheus. Featuring the ability to generate an api key and a wide selection of predefined code snippets to plug in and push up.
-
-#### Dashboard and Design
 
 ### References
 
