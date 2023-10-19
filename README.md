@@ -56,22 +56,22 @@ Ship metrics directly from your application code over HTTP for storage in your G
 
 ### References
 
-- [Avalonia platform support - why it's simple](https://dev.to/avalonia/avalonia-platform-support-why-its-simple-cjd);
-- [Avalonia UI Community Q&A. We talked about themes, v11, MAUI Hybrid and much more.](https://www.reddit.com/r/dotnet/comments/138zcao/avalonia_ui_community_qa_we_talked_about_themes/);
-- [Avalonia for Visual Studio Code (Early Access)](https://avaloniaui.net/Blog/avalonia-for-visual-studio-code-early-access,e2464208-4482-4dd1-bd60-fd11c98983dc);
-- [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider/);
-- [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit);
-- [Devs Cite Problems with GitHub Copilot and IntelliSense Working Together](https://visualstudiomagazine.com/articles/2023/02/17/copilot-intellisense.aspx);
-- [Dev Home](https://learn.microsoft.com/en-us/windows/dev-home/);
-- [Why GitHub Copilot is not a Threat to your Job](https://blog.devgenius.io/why-github-copilot-is-not-a-treat-for-your-job-cd7f5fae9ff9);
-- [I Built an App with GitHub Copilot, Here's the Result](https://www.linkedin.com/pulse/i-built-app-github-copilot-heres-result-simona-winnekes/);
-- [Goldman Sachs CIO is ‘anxious to see results’ from GenAI, but moving carefully | The AI Beat](https://venturebeat.com/ai/goldman-sachs-cio-is-anxious-to-see-results-from-genai-but-moving-carefully-the-ai-beat/);
-- [Proposal: Naming Grid Rows/Columns on Simplified Inline Syntax and Grid.RowColumn](https://github.com/microsoft/microsoft-ui-xaml/issues/2094);
-- [Prompting with Copilot](https://www.youtube.com/watch?v=ImWfIDTxn7E);
-- [Building .NET MAUI Apps Faster with GitHub Copilot in Visual Studio 2022](https://www.youtube.com/watch?v=jt9VZqIKGzU);
-- [Configuring GitHub Copilot in your environment](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment?tool=vscode);
-- [How to Install a GUI Desktop for Ubuntu Server with XFCE and VNC](https://www.vultr.com/docs/install-gui-environment-for-ubuntu/);
-- [Visual Studio Toolbox Live - C# Productivity in VS Code with C# Dev Kit](https://www.youtube.com/watch?v=7NjTIBezZl0);
-- [WSL: Run Linux GUI Apps](https://www.youtube.com/watch?v=kC3eWRPzeWw);
-- [Visualize real-time mobile app data with the Embrace data source plugin for Grafana](https://grafana.com/blog/2023/02/13/visualize-real-time-mobile-app-data-with-the-embrace-data-source-plugin-for-grafana/);
-- [Error message related to libICE.so.6 makes code to exit?](https://stackoverflow.com/questions/75281328/error-message-related-to-libice-so-6-makes-code-to-exit).
+1. [Avalonia platform support - why it's simple](https://dev.to/avalonia/avalonia-platform-support-why-its-simple-cjd);
+1. [Avalonia UI Community Q&A. We talked about themes, v11, MAUI Hybrid and much more.](https://www.reddit.com/r/dotnet/comments/138zcao/avalonia_ui_community_qa_we_talked_about_themes/);
+1. [Avalonia for Visual Studio Code (Early Access)](https://avaloniaui.net/Blog/avalonia-for-visual-studio-code-early-access,e2464208-4482-4dd1-bd60-fd11c98983dc);
+1. [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider/);
+1. [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit);
+1. [Devs Cite Problems with GitHub Copilot and IntelliSense Working Together](https://visualstudiomagazine.com/articles/2023/02/17/copilot-intellisense.aspx);
+1. [Dev Home](https://learn.microsoft.com/en-us/windows/dev-home/);
+1. [Why GitHub Copilot is not a Threat to your Job](https://blog.devgenius.io/why-github-copilot-is-not-a-treat-for-your-job-cd7f5fae9ff9);
+1. [I Built an App with GitHub Copilot, Here's the Result](https://www.linkedin.com/pulse/i-built-app-github-copilot-heres-result-simona-winnekes/);
+1. [Goldman Sachs CIO is ‘anxious to see results’ from GenAI, but moving carefully | The AI Beat](https://venturebeat.com/ai/goldman-sachs-cio-is-anxious-to-see-results-from-genai-but-moving-carefully-the-ai-beat/);
+1. [Proposal: Naming Grid Rows/Columns on Simplified Inline Syntax and Grid.RowColumn](https://github.com/microsoft/microsoft-ui-xaml/issues/2094);
+1. [Prompting with Copilot](https://www.youtube.com/watch?v=ImWfIDTxn7E);
+1. [Building .NET MAUI Apps Faster with GitHub Copilot in Visual Studio 2022](https://www.youtube.com/watch?v=jt9VZqIKGzU);
+1. [Configuring GitHub Copilot in your environment](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-your-environment?tool=vscode);
+1. [How to Install a GUI Desktop for Ubuntu Server with XFCE and VNC](https://www.vultr.com/docs/install-gui-environment-for-ubuntu/);
+1. [Visual Studio Toolbox Live - C# Productivity in VS Code with C# Dev Kit](https://www.youtube.com/watch?v=7NjTIBezZl0);
+1. [WSL: Run Linux GUI Apps](https://www.youtube.com/watch?v=kC3eWRPzeWw);
+1. [Visualize real-time mobile app data with the Embrace data source plugin for Grafana](https://grafana.com/blog/2023/02/13/visualize-real-time-mobile-app-data-with-the-embrace-data-source-plugin-for-grafana/);
+1. [Error message related to libICE.so.6 makes code to exit?](https://stackoverflow.com/questions/75281328/error-message-related-to-libice-so-6-makes-code-to-exit).
