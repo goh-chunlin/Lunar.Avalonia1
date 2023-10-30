@@ -1,6 +1,13 @@
 # Lunar.Avalonia1
 Avalonia demo programme to be used to demonstrate Avalonia UI development, including integration with Syncfusion services.
 
+## Presentation Slides
+
+I was presenting this project in Singapore .NET Developers Community meetup on 20th October 2023.
+
+Slides: https://docs.google.com/presentation/d/1lDpQzs1fN0IqAZcIAHdu2ICS4_MRncj3194mhF3qPxc/edit?usp=sharing
+Recording: https://youtu.be/JpFXTwiDZRo?si=ZcbAssF1EJmRYTnW
+
 ## Related Topics
 
 ### 1. Avalonia UI
