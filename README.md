@@ -16,7 +16,7 @@ Lunia.Avalonia1 running on Windows 11
 Lunia.Avalonia1 running on WSLg:
 ![image](https://github.com/goh-chunlin/Lunar.Avalonia1/assets/8535306/b3b4e70a-9413-4cff-969e-7f3c546a99b8)
 
-<img width="726" alt="image" src="https://github.com/goh-chunlin/Lunar.Avalonia1/assets/8535306/c4d68000-6234-44bb-8185-0b99bcdb5524">
+![image](https://github.com/goh-chunlin/Lunar.Avalonia1/assets/8535306/c4d68000-6234-44bb-8185-0b99bcdb5524)
 
 ## Related Topics
 
