@@ -64,6 +64,7 @@ Ship metrics directly from your application code over HTTP for storage in your G
 ### References
 
 1. [Avalonia platform support - why it's simple](https://dev.to/avalonia/avalonia-platform-support-why-its-simple-cjd);
+1. [Avalonia UI and MAUI - Something for everyone](https://dev.to/avalonia/avalonia-ui-and-maui-something-for-everyone-1a3d)
 1. [Avalonia UI Community Q&A. We talked about themes, v11, MAUI Hybrid and much more.](https://www.reddit.com/r/dotnet/comments/138zcao/avalonia_ui_community_qa_we_talked_about_themes/);
 1. [Avalonia for Visual Studio Code (Early Access)](https://avaloniaui.net/Blog/avalonia-for-visual-studio-code-early-access,e2464208-4482-4dd1-bd60-fd11c98983dc);
 1. [AvaloniaRider](https://plugins.jetbrains.com/plugin/14839-avaloniarider/);
